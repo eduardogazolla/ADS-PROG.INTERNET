@@ -5,7 +5,7 @@ function verificarMaiorIdade(idade) {
 
 // atividade 2
 function orderArray() {
-    let arr = [1, 2, 3, 6, 7, 9];
+    let arr = [0, 1, 2, 3, 6, 7, 9];
     arr.sort((a, b) => a - b);
     return arr;
 }
@@ -13,21 +13,27 @@ function orderArray() {
 // atividade 3
 function meusDados() {
     let pessoa = {
-        nome: 'Jhon Doe',
-        idade: '30',
-        cidade: 'New York',
+        nome: 'Eduardo',
+        idade: '20',
+        cidade: 'Cianorte',
     };
-    pessoa = { ...pessoa, idade: undefined };
+    delete pessoa.idade;
     return pessoa;
 }
 
 //atividade 4
 function manipulaArray() {
     let animais = ['cachorro', 'gato', 'abelha', 'rato', 'leão', 'galinha'];
+
+    function capitalizar(palavra) {
+        return palavra[0].toUpperCase() + palavra.slice(1);
+    }
+
     return {
         ordemAlfabetica: animais.sort(),
         primeiro: animais[0],
         ultimo: animais[animais.length - 1],
         tamanhoDaLista: animais.length,
+        animaisCapitalizados: animais.map(capitalizar),
     };
 }
